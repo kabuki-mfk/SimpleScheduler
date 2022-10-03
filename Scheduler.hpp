@@ -2,12 +2,18 @@
 
 #include <QWidget>
 
-
+#include <vector>
+#include <string>
 
 QT_BEGIN_NAMESPACE
 class QLineEdit;
 class QTextEdit;
 QT_END_NAMESPACE
+
+struct item
+{
+    std::string task, detail;
+};
 
 class Scheduler : public QWidget
 {
@@ -19,4 +25,5 @@ public:
 private:
     QLineEdit *nameLine;
     QTextEdit *addressText;
+    std::vector<item> vec_item;
 };

@@ -1,21 +1,16 @@
 #include <QtWidgets>
 #include "Scheduler.hpp"
 
-Scheduler::Scheduler(QWidget *parent)
-    : QWidget(parent)
+Scheduler::Scheduler(QWidget *parent) : QWidget(parent)
 {
-    QLabel *nameLabel = new QLabel(tr("Name:"));
-    nameLine = new QLineEdit;
+    QHBoxLayout *hBoxLayout = new QHBoxLayout;
 
-    QLabel *addressLabel = new QLabel(tr("Address:"));
-    addressText = new QTextEdit;
+    QPushButton *button1 = new QPushButton(tr("1"));
 
-    QGridLayout *mainLayout = new QGridLayout;
-    mainLayout->addWidget(nameLabel, 0, 0);
-    mainLayout->addWidget(nameLine, 0, 1);
-    mainLayout->addWidget(addressLabel, 1, 0, Qt::AlignTop);
-    mainLayout->addWidget(addressText, 1, 1);
+    hBoxLayout->addWidget(button1, 0);
 
-    setLayout(mainLayout);
-    setWindowTitle(tr("Simple Address Book"));
+    QGridLayout *mainLayout = new QGridLayout(this);
+    mainLayout->addLayout(hBoxLayout,0,0);
+
+    setWindowTitle(tr("Scheduler"));
 }
