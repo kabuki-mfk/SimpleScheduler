@@ -23,7 +23,5 @@ public:
     Scheduler(QWidget *parent = nullptr);
 
 private:
-    QLineEdit *nameLine;
-    QTextEdit *addressText;
     std::vector<item> vec_item;
 };
