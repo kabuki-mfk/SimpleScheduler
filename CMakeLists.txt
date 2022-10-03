@@ -18,7 +18,6 @@ set(PROJECT_SOURCES
         main.cpp
         Scheduler.hpp
         Scheduler.cpp
-
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
